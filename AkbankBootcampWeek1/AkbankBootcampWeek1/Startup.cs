@@ -1,5 +1,4 @@
 ﻿using FluentValidation.AspNetCore;
-using Microsoft.Extensions.Configuration;
 
 namespace AkbankBootcampWeek1;
 
@@ -17,6 +16,7 @@ public class Startup
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
 
+        // FluentValidation paketinin servislere eklenmesi.
         services.AddFluentValidation(conf =>
         {
             conf.RegisterValidatorsFromAssembly(typeof(Program).Assembly);
